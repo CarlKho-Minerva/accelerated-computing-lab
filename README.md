@@ -2,6 +2,8 @@
 
 An interactive systems portfolio by [Carl Vincent Kho](https://linkedin.com/in/carlkho). It turns three hardware/software co-design concepts into browser-executed models whose state, assumptions, and failure modes can be inspected directly.
 
+**Live site:** [accelerated-computing-lab.vercel.app](https://accelerated-computing-lab.vercel.app)
+
 This is not a gallery of screenshots. The CPU executes instructions, the AXI-Lite panel changes signal traces and assertions, and the CXL profiler recalculates its curves from a documented model.
 
 ## What is inside
