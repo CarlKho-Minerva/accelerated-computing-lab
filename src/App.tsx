@@ -67,7 +67,9 @@ function App() {
           </div>
 
           <div className="py-12 sm:py-16">
-            <p className="mb-6 font-mono text-xs uppercase text-cxl">Carl Vincent Kho</p>
+            <a href="https://somach.vercel.app/" target="_blank" rel="noreferrer" className="font-mono text-xs uppercase text-cxl">
+              Carl Vincent Kho
+            </a>
             <h1 className="max-w-5xl text-5xl font-semibold leading-[1.02] text-ink sm:text-6xl lg:text-7xl">
               Hardware-aware AI systems, made inspectable.
             </h1>
@@ -132,7 +134,9 @@ function App() {
       <footer className="border-t border-line bg-[#08090c]">
         <div className="mx-auto grid max-w-[1440px] gap-8 border-x border-line px-5 py-8 sm:px-8 md:grid-cols-[1fr_auto] md:items-end lg:px-14">
           <div>
-            <div className="font-mono text-xs text-ink">Carl Vincent Kho</div>
+            <a href="https://somach.vercel.app/" target="_blank" rel="noreferrer" className="font-mono text-xs uppercase text-cxl">
+              Carl Vincent Kho
+            </a>
             <p className="mt-2 max-w-xl text-sm leading-6 text-muted">
               AI systems engineer working across distributed reliability, embedded ML, and hardware-constrained inference.
             </p>
@@ -143,16 +147,18 @@ function App() {
                 <UserRound size={15} aria-hidden="true" />
                 Profile
               </button>
-              <div
-                id="profile-summary"
-                role="tooltip"
-                className="pointer-events-none invisible absolute bottom-[calc(100%+0.75rem)] left-0 z-20 w-[min(20rem,calc(100vw-2.5rem))] border border-line bg-surface p-4 opacity-0 shadow-xl transition-all duration-100 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 md:left-auto md:right-0"
-              >
-                <div className="font-mono text-[10px] uppercase text-signal">Profile summary</div>
-                <p className="mt-3 text-xs leading-6 text-[#c2c8d3]">
-                  Minerva Computational Sciences graduate, former Dell SRE intern in Kubernetes and chaos engineering, and creator of Somach low-cost sEMG interfaces.
-                </p>
-              </div>
+              <a href="https://somach.vercel.app/" target="_blank" rel="noreferrer">
+                <div
+                  id="profile-summary"
+                  role="tooltip"
+                  className="pointer-events-none invisible absolute bottom-[calc(100%+0.75rem)] left-0 z-20 w-[min(20rem,calc(100vw-2.5rem))] border border-line bg-surface p-4 opacity-0 shadow-xl transition-all duration-100 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 md:left-auto md:right-0"
+                >
+                  <div className="font-mono text-[10px] uppercase text-signal">Profile summary</div>
+                  <p className="mt-3 text-xs leading-6 text-[#c2c8d3]">
+                    Minerva Computational Sciences graduate, former Dell SRE intern in Kubernetes and chaos engineering, and creator of Somach low-cost sEMG interfaces.
+                  </p>
+                </div>
+              </a>
             </div>
             <a href="mailto:kho@uni.minerva.edu" className="icon-button" aria-label="Email Carl" title="Email Carl"><Mail size={16} aria-hidden="true" /></a>
             <a href="https://linkedin.com/in/carlkho" target="_blank" rel="noreferrer" className="icon-button" aria-label="Carl on LinkedIn" title="LinkedIn"><Linkedin size={16} aria-hidden="true" /></a>
