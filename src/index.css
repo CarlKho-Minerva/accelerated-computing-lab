@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #07080a;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #07080a;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #07080a;
+  background: #76b900;
+}
+
+@layer components {
+  .nav-link {
+    @apply flex h-9 items-center px-2 font-mono text-[11px] text-muted transition-colors duration-100 hover:text-ink sm:px-3;
+  }
+
+  .control-tab {
+    @apply min-h-11 bg-[#0a0c11] px-3 font-mono text-[11px] text-muted transition-colors duration-100 hover:bg-surface hover:text-ink;
+  }
+
+  .control-tab-active-green {
+    @apply bg-signal/10 text-signal shadow-signal;
+  }
+
+  .command-button {
+    @apply flex min-h-10 w-full items-center justify-center gap-2 border border-[#303546] bg-[#151822] px-3 font-mono text-[11px] font-medium uppercase text-[#c7cdd8] transition-colors duration-100 hover:border-[#4a5165] hover:bg-[#1a1e2a] hover:text-white disabled:cursor-not-allowed disabled:opacity-40;
+    border-radius: 4px;
+  }
+
+  .command-button-green {
+    @apply border-signal/50 bg-signal/10 text-signal hover:border-signal hover:bg-signal/15 hover:text-[#9bdd20];
+  }
+
+  .command-button-amber {
+    @apply border-amber/40 bg-amber/10 text-amber hover:border-amber hover:bg-amber/15 hover:text-[#ffc15c];
+  }
+
+  .command-button-critical {
+    @apply border-critical/40 bg-critical/10 text-critical hover:border-critical hover:bg-critical/15 hover:text-[#ff8585];
+  }
+
+  .icon-button {
+    @apply grid h-10 w-10 shrink-0 place-items-center border border-[#303546] bg-[#12151d] text-muted transition-colors duration-100 hover:border-[#4a5165] hover:bg-[#1a1e29] hover:text-ink;
+    border-radius: 4px;
+  }
+
+  .status-readout {
+    @apply flex items-center gap-2 font-mono text-[10px] font-medium uppercase;
+  }
+
+  .status-dot {
+    @apply h-1.5 w-1.5;
+  }
+
+  .hero-readout {
+    @apply flex min-h-14 items-center gap-3 border-b border-line px-4 font-mono text-[11px] text-[#a7afbd] last:border-b-0 sm:border-b-0;
+  }
+}
+
+.profiler-range {
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  background: transparent;
+}
+
+.profiler-range::-webkit-slider-runnable-track {
+  height: 3px;
+  background: #2a3040;
+}
+
+.profiler-range::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: -6px;
+  appearance: none;
+  border: 2px solid #07080a;
+  border-radius: 2px;
+  background: #38bdf8;
+  box-shadow: 0 0 0 1px #38bdf8;
+}
+
+.profiler-range::-moz-range-track {
+  height: 3px;
+  background: #2a3040;
+}
+
+.profiler-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #07080a;
+  border-radius: 2px;
+  background: #38bdf8;
+  box-shadow: 0 0 0 1px #38bdf8;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090b0f;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #090b0f;
+  background: #272c39;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
